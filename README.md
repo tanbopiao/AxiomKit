@@ -21,6 +21,7 @@ Plus two batteries-included utilities:
 
 - **Gateway** — a minimal HMAC-authenticated HTTP API to query an agent's memory index by anchor conditions (no full scans).
 - **Recall** — zero-dependency TF-IDF semantic recall with multi-dimensional routing, for offline agents.
+- **Evolution** — guarded recursive self-improvement: the agent proposes changes to its own tunable parameters, a shadow trial measures them, and a grayscale gate promotes or rolls back automatically. The axiom core is frozen; every step is hash-chained for audit.
 
 ### Install
 
@@ -76,6 +77,7 @@ print(frag)   # purified fragment; raw tenant text never leaves the pool
 | `axiomkit.fedmem` | cross-tenant semantic fragment pool with K-tenant corroboration | knowledge sharing without data leakage |
 | `axiomkit.gateway` | HMAC-signed HTTP API over a memory index (optional `fastapi`) | fast anchored lookups |
 | `axiomkit.recall` | TF-IDF + multi-dim routing, stdlib only | offline semantic recall |
+| `axiomkit.evolution` | guarded RSI: whitelist → shadow trial → grayscale promote/rollback, frozen core, hash-chained audit | agents that improve themselves without breaking their own rules |
 
 ### Origins
 
@@ -98,6 +100,7 @@ Alpha. APIs may change. Security review welcome — please open issues.
 
 - **Gateway** —— 极简 HMAC 鉴权 HTTP API,按锚定条件定点查询记忆索引(不做全量扫描)。
 - **Recall** —— 零依赖 TF-IDF 语义召回 + 多维路由,适合离线智能体。
+- **Evolution** —— 受控递归自改进(RSI):智能体可提议修改自身可调参数,影子试验度量效果,灰度门控自动晋级或回滚;公理核心冻结不可改,每步哈希链留痕可审计。
 
 ### 安装
 
@@ -119,6 +122,7 @@ pip install "axiomkit[http]"    # + 记忆网关 HTTP API
 | `axiomkit.fedmem` | 跨租户语义碎片池,K 租户交叉印证 | 不泄露数据的知识共享 |
 | `axiomkit.gateway` | 记忆索引上的 HMAC 签名 HTTP API(可选 `fastapi`) | 锚定条件定点查询 |
 | `axiomkit.recall` | TF-IDF + 多维路由,仅标准库 | 离线语义召回 |
+| `axiomkit.evolution` | 受控 RSI:白名单 → 影子试验 → 灰度晋级/回滚,冻结内核,哈希链审计 | 会自我进化而不破坏自身规则的智能体 |
 
 ### 来源
 
